@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="plusstyles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css"
+      integrity="sha512-6c4nX2tn5KbzeBJo9Ywpa0Gkt+mzCzJBrE1RB6fmpcsoN+b/w/euwIMuQKNyUoU/nToKN3a8SgNOtPrbW12fug=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Black+Han+Sans&family=Cute+Font&family=Do+Hyeon&family=Dokdo&family=East+Sea+Dokdo&family=Gaegu&family=Gamja+Flower&family=Gothic+A1&family=Gugi&family=Hi+Melody&family=Jua&family=Kirang+Haerang&family=Nanum+Brush+Script&family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Nanum+Myeongjo&family=Nanum+Pen+Script&family=Noto+Sans+KR&family=Noto+Serif+KR&family=Poor+Story&family=Single+Day&family=Song+Myung&family=Stylish&family=Sunflower:wght@300&family=Yeon+Sung&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn-icons-png.flaticon.com/512/3983/3983390.png"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <title>Welcome ToDoList</title>
+  </head>
+  <body>
+    <div id="all">
+      <h1 class="clock"></h1>
+      <p class="title maintitle">@_kimwonny toDoList</p>
+      <button class="goindex">
+        <a href="first.html">
+          <i class="far fa-calendar-check fa-5x"></i>
+        </a>
+      </button>
+      <div class="list main">
+        <p>투두리스트를 시작하시려면 <br />위 버튼을 눌러주세요</p>
+        <p class="small">
+          < 사용방법 ><br />
+          1. 메인에 들어간다 <br />
+          2. 오른쪽 위에 있는 + 버튼을 누른다 <br />
+          3. 날짜와 할 일을 추가한다!<br />
+        </p>
+        <p class="small">
+          ★ 날짜와 할 일을 다 입력하신 후 ★<br />
+          표정을 눌러 하루를 평가해보세요^0^
+        </p>
+      </div>
+    </div>
+
+    <script>
+      getTime();
+      function getTime() {
+        const clock = document.querySelector(".clock");
+        const time = new Date();
+        const month = time.getMonth() + 1;
+        const day = time.getDate();
+        const hour = time.getHours();
+        const minute = time.getMinutes();
+        clock.innerHTML = `오늘 날짜 : ${month}월 ${day}일!<br><br>현재 시간 : ${hour}시 ${minute}분`;
+      }
+      function init() {
+        setInterval(getTime, 1000);
+      }
+      init();
+    </script>
+  </body>
+</html>

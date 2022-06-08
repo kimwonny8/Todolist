@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="plusstyles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css"
+      integrity="sha512-6c4nX2tn5KbzeBJo9Ywpa0Gkt+mzCzJBrE1RB6fmpcsoN+b/w/euwIMuQKNyUoU/nToKN3a8SgNOtPrbW12fug=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com"> <link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Black+Han+Sans&family=Cute+Font&family=Do+Hyeon&family=Dokdo&family=East+Sea+Dokdo&family=Gaegu&family=Gamja+Flower&family=Gothic+A1&family=Gugi&family=Hi+Melody&family=Jua&family=Kirang+Haerang&family=Nanum+Brush+Script&family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Nanum+Myeongjo&family=Nanum+Pen+Script&family=Noto+Sans+KR&family=Noto+Serif+KR&family=Poor+Story&family=Single+Day&family=Song+Myung&family=Stylish&family=Sunflower:wght@300&family=Yeon+Sung&display=swap" rel="stylesheet">
+    <link
+      href="https://cdn-icons-png.flaticon.com/512/2554/2554282.png"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <title>TodoList add</title>
+  </head>
+  <body>
+    <div id="all">
+      <div id="top">
+        <button class="button">
+            <a href="introduction.html">
+            <i class="fas fa-question fa-2x" ></i>
+          </a>
+        </button>
+        <button class="add button"><a href="first.html"><i class="fas fa-check fa-2x"></i></a></button>
+      </div>
+      <div class="datebox">
+        <div class="title">날짜</div>
+        <input type="text"  id="datetext" onkeyup="enterkeyDate()" placeholder="날짜를 입력해주세요" />
+        <button id="dateplus" class="button whiteButton ">
+            <i class="fas fa-plus fa-2x"></i></a>
+          </button></div>
+          <div class="listbox">
+            <div class="title ">할 일</div>
+            <div><input type="text" id="todotext" onkeyup="enterkeyList()" placeholder="할 일을 추가해주세요" />
+                <button id="todoplus" class="button whiteButton">
+              <i class="fas fa-plus fa-2x"></i></a>
+            </button></div>
+      </div>
+    </div>
+    <div class="list"><ul></ul></div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
